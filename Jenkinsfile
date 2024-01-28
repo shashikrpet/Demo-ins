@@ -17,17 +17,17 @@ git branch: 'main', url: 'https://github.com/shashikrpet/Demo-ins.git'
     }
     }
 
-stage('docker image'){
-  steps{
-    sh'docker build -t shashikrpet/demoins:1.0 .'
-  }
-}
+// stage('docker image'){
+//   steps{
+//     sh'docker build -t shashikrpet/demoins:1.0 .'
+//   }
+// }
 
 
 stage('docker push'){
  steps{
   withCredentials([usernamePassword(credentialsId: 'dockerlog', passwordVariable: 'passlog', usernameVariable: 'userlog')]) {
-    sh 'docker login -u ${userrlog} -p ${passlog}'
+    sh 'docker login -u ${userlog} -p ${passlog}'
 } 
      sh ' docker push shashikrpet/demoins:1.0'
  }
