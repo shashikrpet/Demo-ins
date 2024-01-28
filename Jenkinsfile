@@ -7,7 +7,7 @@ pipeline{
   stages{
     stage('checkout git'){
       steps{
-          git branch: 'main', url: 'https://github.com/shashikrpet/Insurance.git'
+          git branch: 'main', url: 'https://github.com/shashikrpet/Demo-ins.git'
       }
     }
 
