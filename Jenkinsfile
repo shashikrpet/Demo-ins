@@ -6,7 +6,7 @@ pipeline{
 
   stages{
     stage('git checkout'){
-    step{
+    steps{
 git branch: 'main', url: 'https://github.com/shashikrpet/Demo-ins.git'
     }
   }
