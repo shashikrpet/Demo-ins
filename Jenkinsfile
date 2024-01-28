@@ -14,7 +14,7 @@ git branch: 'main', url: 'https://github.com/shashikrpet/Demo-ins.git'
     stage('maven'){
     steps{
       sh 'mvn clean package'
-
+    }
     }
 
 
