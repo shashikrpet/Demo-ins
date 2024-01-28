@@ -17,7 +17,11 @@ git branch: 'main', url: 'https://github.com/shashikrpet/Demo-ins.git'
     }
     }
 
-
+stage('docker image'){
+  steps{
+    sh'docker build -t shashikrpet/demoins:1.0 .'
+  }
+}
     
   }
 }
