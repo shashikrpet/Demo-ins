@@ -22,6 +22,16 @@ stage('docker image'){
     sh'docker build -t shashikrpet/demoins:1.0 .'
   }
 }
+
+
+stage('docker push'){
+ steps{
+  withCredentials([usernamePassword(credentialsId: 'dockerlog', passwordVariable: 'passlog', usernameVariable: 'userlog')]) {
+    sh 'docker login -u ${dockerlog} -p ${passlog}'
+} 
+
+ }
+}
     
   }
 }
